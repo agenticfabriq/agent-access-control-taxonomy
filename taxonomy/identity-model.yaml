@@ -1,0 +1,28 @@
+dimension: identity-model
+id: aact:identity-model
+question: What is the agent, as far as the target system is concerned?
+terms:
+  - id: aact:identity-model/shared-human-identity
+    label: Shared human identity
+    definition: The agent authenticates as the human who deployed or runs it, and target systems cannot tell the two apart.
+    includes: [personal access tokens pasted into agent config, browser session reuse]
+    excludes: [delegated OAuth where the token records the client application]
+    risk_note: Actions are unattributable to the agent; revoking the agent means revoking the human.
+    related: [aact:audit-granularity/none-distinguishable]
+  - id: aact:identity-model/shared-service-account
+    label: Shared service account
+    definition: Many agents, or an agent and other software, authenticate with one non-human account.
+    includes: [a single API key used by every agent in a product]
+    risk_note: Blast radius covers every consumer of the account.
+  - id: aact:identity-model/workload-identity
+    label: Workload identity
+    definition: The runtime that hosts the agent (container, function, VM) has an identity issued by the platform, and the agent inherits it.
+    includes: [cloud IAM roles attached to compute, SPIFFE IDs]
+    excludes: [identities issued per agent instance or per agent definition]
+  - id: aact:identity-model/per-agent-identity
+    label: Per-agent identity
+    definition: Each agent, as a logical actor, has its own identity that is registered, can carry its own policy, and can be revoked without affecting humans or other agents.
+    related: [aact:delegation-model/on-behalf-of-user, aact:audit-granularity/per-action-with-principal-chain]
+  - id: aact:identity-model/per-instance-identity
+    label: Per-instance identity
+    definition: Every running instance or session of an agent receives a distinct, typically short-lived identity linked to the agent definition that spawned it.

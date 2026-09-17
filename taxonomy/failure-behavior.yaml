@@ -1,0 +1,13 @@
+dimension: failure-behavior
+id: aact:failure-behavior
+question: What happens when an authorization decision cannot be made?
+terms:
+  - id: aact:failure-behavior/fail-open
+    label: Fail open
+    definition: If policy is missing, unreachable or ambiguous, the action proceeds.
+  - id: aact:failure-behavior/fail-closed
+    label: Fail closed
+    definition: If policy is missing, unreachable or ambiguous, the action is denied and the denial is recorded.
+  - id: aact:failure-behavior/refuse-and-explain
+    label: Refuse and explain
+    definition: The agent declines, tells the requester what it could not do and why, and does not substitute a partial or guessed result.

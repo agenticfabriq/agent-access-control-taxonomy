@@ -1,0 +1,21 @@
+dimension: authorization-model
+id: aact:authorization-model
+question: How is each action the agent attempts decided?
+terms:
+  - id: aact:authorization-model/scope-at-grant
+    label: Scope at grant time only
+    definition: Permissions are fixed when a credential is issued; individual actions within that scope are not checked again.
+  - id: aact:authorization-model/role-based
+    label: Role-based
+    definition: The agent is assigned roles and actions are permitted if any role allows them.
+  - id: aact:authorization-model/per-action-policy
+    label: Per-action policy evaluation
+    definition: Each tool call or query is evaluated against policy at the moment it is attempted, using attributes of the agent, user, resource and request.
+  - id: aact:authorization-model/intersection-of-agent-and-user
+    label: Intersection of agent and user permissions
+    definition: An action is allowed only if both the agent's own policy and the delegating user's permissions allow it.
+    note: Prevents an agent from becoming a privilege-escalation path for a low-privilege user, and vice versa.
+  - id: aact:authorization-model/deterministic-guard-on-generated-action
+    label: Deterministic guard on generated actions
+    definition: A model-generated action (for example SQL or a shell command) is parsed and checked by non-model code for shape, access and safety before execution.
+    related: [tsqlet:check/access-check]

@@ -1,0 +1,11 @@
+id: governed-internal-data-agent
+description: An internal analytics agent answering employee questions against a warehouse, limited to what each employee can already see.
+identity_model: aact:identity-model/per-agent-identity
+delegation_model: aact:delegation-model/on-behalf-of-user
+credential_model: aact:credential-model/credential-never-exposed
+authorization_model: aact:authorization-model/intersection-of-agent-and-user
+enforcement_point: [aact:enforcement-point/gateway, aact:enforcement-point/target-system]
+failure_behavior: aact:failure-behavior/refuse-and-explain
+human_oversight: aact:human-oversight/post-hoc-review
+audit_granularity: aact:audit-granularity/per-action-with-principal-chain
+resource_surface: [aact:resource-surface/database]

@@ -1,0 +1,10 @@
+site_name: Agent Access Control Taxonomy
+site_url: https://agenticfabriq.github.io/agent-access-control-taxonomy/
+site_description: An open, vendor-neutral vocabulary for how AI agents are identified, authorized, credentialed and audited.
+repo_url: https://github.com/agenticfabriq/agent-access-control-taxonomy
+theme:
+  name: material
+  custom_dir: overrides
+nav:
+  - Overview: index.md
+  - FAQ: faq.md

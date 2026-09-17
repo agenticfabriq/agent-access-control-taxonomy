@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agenticfabriq.github.io/agent-access-control-taxonomy/schema/deployment-record.schema.json",
+  "title": "Agent deployment record",
+  "type": "object",
+  "required": ["id", "identity_model", "delegation_model", "credential_model", "authorization_model", "enforcement_point", "failure_behavior", "audit_granularity"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "description": {"type": "string"},
+    "identity_model": {"type": "string", "pattern": "^aact:identity-model/"},
+    "delegation_model": {"type": "string", "pattern": "^aact:delegation-model/"},
+    "credential_model": {"type": "string", "pattern": "^aact:credential-model/"},
+    "authorization_model": {"type": "string", "pattern": "^aact:authorization-model/"},
+    "enforcement_point": {"type": "array", "items": {"type": "string", "pattern": "^aact:enforcement-point/"}, "minItems": 1},
+    "failure_behavior": {"type": "string", "pattern": "^aact:failure-behavior/"},
+    "human_oversight": {"type": "string", "pattern": "^aact:human-oversight/"},
+    "audit_granularity": {"type": "string", "pattern": "^aact:audit-granularity/"},
+    "resource_surface": {"type": "array", "items": {"type": "string", "pattern": "^aact:resource-surface/"}},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

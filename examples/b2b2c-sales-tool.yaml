@@ -1,0 +1,11 @@
+id: b2b2c-sales-tool
+description: A startup's sales assistant that drafts and sends email from each customer rep's own mailbox.
+identity_model: aact:identity-model/per-agent-identity
+delegation_model: aact:delegation-model/on-behalf-of-end-customer
+credential_model: aact:credential-model/brokered-short-lived-token
+authorization_model: aact:authorization-model/per-action-policy
+enforcement_point: [aact:enforcement-point/gateway]
+failure_behavior: aact:failure-behavior/fail-closed
+human_oversight: aact:human-oversight/approval-for-high-risk
+audit_granularity: aact:audit-granularity/per-action
+resource_surface: [aact:resource-surface/saas-api]

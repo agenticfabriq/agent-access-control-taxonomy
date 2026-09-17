@@ -1,0 +1,12 @@
+id: api-key-in-env
+description: A prototype agent with a personal GitHub token and a Slack bot token in environment variables.
+identity_model: aact:identity-model/shared-human-identity
+delegation_model: aact:delegation-model/autonomous
+credential_model: aact:credential-model/static-secret-in-agent
+authorization_model: aact:authorization-model/scope-at-grant
+enforcement_point: [aact:enforcement-point/in-prompt, aact:enforcement-point/target-system]
+failure_behavior: aact:failure-behavior/fail-open
+human_oversight: aact:human-oversight/none
+audit_granularity: aact:audit-granularity/none-distinguishable
+resource_surface: [aact:resource-surface/saas-api, aact:resource-surface/code-and-shell]
+notes: The most common starting point. Every dimension here is a candidate for the first hardening step.

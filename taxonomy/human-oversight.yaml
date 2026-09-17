@@ -1,0 +1,16 @@
+dimension: human-oversight
+id: aact:human-oversight
+question: When does a person get involved in an agent's actions?
+terms:
+  - id: aact:human-oversight/none
+    label: None
+    definition: No human reviews actions before or after they occur, beyond incident response.
+  - id: aact:human-oversight/post-hoc-review
+    label: Post-hoc review
+    definition: Humans review logs or samples of actions after execution.
+  - id: aact:human-oversight/approval-for-high-risk
+    label: Approval for high-risk actions
+    definition: Actions matching a risk rule (for example writes, deletes, external sends, payments) wait for a named human's approval.
+  - id: aact:human-oversight/approval-for-all
+    label: Approval for all actions
+    definition: Every action waits for human approval.

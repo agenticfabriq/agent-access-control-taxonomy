@@ -1,0 +1,23 @@
+    {% extends "base.html" %}
+    {% block extrahead %}
+      <script type="application/ld+json">
+      {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://agenticfabriq.github.io/agent-access-control-taxonomy/#termset",
+  "name": "Agent Access Control Taxonomy",
+  "description": "An open, vendor-neutral vocabulary for how AI agents are identified, authorized, credentialed and audited: 9 dimensions, 40 terms, with a JSON Schema for deployment records.",
+  "url": "https://agenticfabriq.github.io/agent-access-control-taxonomy/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.agenticfabriq.com/#organization",
+    "name": "Agentic Fabriq",
+    "url": "https://www.agenticfabriq.com/"
+  },
+  "sameAs": [
+    "https://github.com/agenticfabriq/agent-access-control-taxonomy"
+  ]
+}
+      </script>
+    {% endblock %}

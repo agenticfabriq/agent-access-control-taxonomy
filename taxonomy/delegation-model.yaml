@@ -1,0 +1,21 @@
+dimension: delegation-model
+id: aact:delegation-model
+question: Whose authority is the agent acting with?
+terms:
+  - id: aact:delegation-model/autonomous
+    label: Autonomous (own authority)
+    definition: The agent acts under permissions granted directly to it, not derived from any human user.
+    example: A nightly reconciliation agent with its own read access to a ledger.
+  - id: aact:delegation-model/on-behalf-of-user
+    label: On behalf of a user
+    definition: The agent acts for a specific human, and its effective permissions are bounded by that human's permissions.
+    includes: [OAuth 2.0 authorization code grants, token exchange with an actor claim]
+    related: [aact:authorization-model/intersection-of-agent-and-user]
+  - id: aact:delegation-model/on-behalf-of-end-customer
+    label: On behalf of an end customer (B2B2C)
+    definition: A software vendor's agent acts for the vendor's customer's users against that customer's third-party accounts.
+    example: A sales tool's agent sending email from each customer rep's own Gmail.
+  - id: aact:delegation-model/agent-to-agent
+    label: Agent-to-agent delegation
+    definition: One agent invokes another and passes along some or all of its authority, forming a chain of principals.
+    risk_note: Without a recorded principal chain, the originating human is lost after the first hop.

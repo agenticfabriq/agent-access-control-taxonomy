@@ -1,0 +1,18 @@
+dimension: enforcement-point
+id: aact:enforcement-point
+question: Where is the authorization decision enforced?
+terms:
+  - id: aact:enforcement-point/in-prompt
+    label: In the prompt
+    definition: Restrictions are expressed as instructions to the model, with no enforcement outside it.
+    risk_note: Not a security control; bypassable by injection or model error.
+  - id: aact:enforcement-point/in-agent-code
+    label: In agent code
+    definition: The agent framework or application checks permissions before calling a tool.
+  - id: aact:enforcement-point/gateway
+    label: Gateway or proxy
+    definition: A separate service between agent and tools (for example an MCP gateway) enforces policy on every call.
+  - id: aact:enforcement-point/target-system
+    label: Target system
+    definition: The SaaS application, database or API enforces permissions natively against the presented identity.
+    includes: [database row-level security, SaaS sharing permissions]

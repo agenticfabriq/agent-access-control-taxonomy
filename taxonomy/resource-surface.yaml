@@ -1,0 +1,12 @@
+dimension: resource-surface
+id: aact:resource-surface
+question: What kinds of systems can the agent reach?
+multi_valued: true
+terms:
+  - {id: aact:resource-surface/saas-api, label: SaaS API, definition: Third-party or internal SaaS applications reached over HTTP APIs.}
+  - {id: aact:resource-surface/mcp-server, label: MCP server, definition: Tools exposed through the Model Context Protocol.}
+  - {id: aact:resource-surface/database, label: Database, definition: Relational or analytical data stores queried directly.}
+  - {id: aact:resource-surface/file-store, label: File store, definition: Document and object storage such as drives and buckets.}
+  - {id: aact:resource-surface/code-and-shell, label: Code and shell, definition: Repositories, terminals and execution environments, typical of coding agents.}
+  - {id: aact:resource-surface/browser, label: Browser, definition: Web applications operated through a browser as a human would.}
+  - {id: aact:resource-surface/internal-network, label: Internal network, definition: Private services reachable only inside a corporate network.}

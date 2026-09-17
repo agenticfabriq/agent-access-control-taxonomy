@@ -1,0 +1,16 @@
+dimension: audit-granularity
+id: aact:audit-granularity
+question: What is recorded about agent actions, and who are they attributed to?
+terms:
+  - id: aact:audit-granularity/none-distinguishable
+    label: Not distinguishable
+    definition: Agent actions appear in logs indistinguishable from human or other service activity.
+  - id: aact:audit-granularity/session-level
+    label: Session level
+    definition: Logs record that an agent session occurred, with coarse metadata, but not each action.
+  - id: aact:audit-granularity/per-action
+    label: Per action
+    definition: Each tool call or query is logged with timestamp, agent, target and outcome.
+  - id: aact:audit-granularity/per-action-with-principal-chain
+    label: Per action with principal chain
+    definition: Each action records the agent, the human or upstream agent it acted for, the policy decision, and the inputs that led to it.
