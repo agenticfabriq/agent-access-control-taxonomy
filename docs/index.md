@@ -26,15 +26,15 @@ is described by a record, not a label.
 
 | # | Dimension | Question it answers | File |
 |---|---|---|---|
-| 1 | Identity model | What is the agent, as far as the system is concerned? | [`taxonomy/identity-model.yaml`](taxonomy/identity-model.yaml) |
-| 2 | Delegation model | Whose authority is the agent acting with? | [`taxonomy/delegation-model.yaml`](taxonomy/delegation-model.yaml) |
-| 3 | Credential model | What secret does it present, and who holds it? | [`taxonomy/credential-model.yaml`](taxonomy/credential-model.yaml) |
-| 4 | Authorization model | How is each action decided? | [`taxonomy/authorization-model.yaml`](taxonomy/authorization-model.yaml) |
-| 5 | Enforcement point | Where is the decision enforced? | [`taxonomy/enforcement-point.yaml`](taxonomy/enforcement-point.yaml) |
-| 6 | Failure behavior | What happens when the decision can't be made? | [`taxonomy/failure-behavior.yaml`](taxonomy/failure-behavior.yaml) |
-| 7 | Human oversight | When does a person get involved? | [`taxonomy/human-oversight.yaml`](taxonomy/human-oversight.yaml) |
-| 8 | Audit granularity | What gets recorded, attributed to whom? | [`taxonomy/audit-granularity.yaml`](taxonomy/audit-granularity.yaml) |
-| 9 | Resource surface | What kinds of systems can the agent reach? | [`taxonomy/resource-surface.yaml`](taxonomy/resource-surface.yaml) |
+| 1 | Identity model | What is the agent, as far as the system is concerned? | [`taxonomy/identity-model.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/identity-model.yaml) |
+| 2 | Delegation model | Whose authority is the agent acting with? | [`taxonomy/delegation-model.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/delegation-model.yaml) |
+| 3 | Credential model | What secret does it present, and who holds it? | [`taxonomy/credential-model.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/credential-model.yaml) |
+| 4 | Authorization model | How is each action decided? | [`taxonomy/authorization-model.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/authorization-model.yaml) |
+| 5 | Enforcement point | Where is the decision enforced? | [`taxonomy/enforcement-point.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/enforcement-point.yaml) |
+| 6 | Failure behavior | What happens when the decision can't be made? | [`taxonomy/failure-behavior.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/failure-behavior.yaml) |
+| 7 | Human oversight | When does a person get involved? | [`taxonomy/human-oversight.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/human-oversight.yaml) |
+| 8 | Audit granularity | What gets recorded, attributed to whom? | [`taxonomy/audit-granularity.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/audit-granularity.yaml) |
+| 9 | Resource surface | What kinds of systems can the agent reach? | [`taxonomy/resource-surface.yaml`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/taxonomy/resource-surface.yaml) |
 
 Each term has a stable ID (`aact:<dimension>/<term>`), a one-sentence
 definition, inclusion and exclusion notes, and related terms.
@@ -42,8 +42,8 @@ definition, inclusion and exclusion notes, and related terms.
 ## Classify a deployment
 
 A deployment record validates against
-[`schema/deployment-record.schema.json`](schema/deployment-record.schema.json).
-Worked examples live in [`examples/`](examples/).
+[`schema/deployment-record.schema.json`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/schema/deployment-record.schema.json).
+Worked examples live in [`examples/`](https://github.com/agenticfabriq/agent-access-control-taxonomy/tree/main/examples).
 
 ```yaml
 id: example-internal-sales-agent
@@ -70,7 +70,7 @@ resource_surface: [aact:resource-surface/saas-api, aact:resource-surface/mcp-ser
 
 ## How to cite
 
-See [`CITATION.cff`](CITATION.cff). Cite the release tag you used; term IDs are
+See [`CITATION.cff`](https://github.com/agenticfabriq/agent-access-control-taxonomy/blob/main/CITATION.cff). Cite the release tag you used; term IDs are
 stable across minor versions.
 
 ## Related open references from the same maintainer
