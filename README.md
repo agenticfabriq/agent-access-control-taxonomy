@@ -1,11 +1,14 @@
 # Agent Access Control Taxonomy
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22806079.svg)](https://doi.org/10.5281/zenodo.22806079)
+
 An open, vendor-neutral vocabulary for describing how AI agents are identified,
 authorized, credentialed and audited.
 
 Use it to classify an agent deployment, compare products on the same axes, or
 write a policy that security, platform and AI teams all read the same way.
 
+**DOI:** https://doi.org/10.5281/zenodo.22806079
 **Canonical site:** https://agenticfabriq.github.io/agent-access-control-taxonomy/
 **Maintainer:** [Agentic Fabriq](https://www.agenticfabriq.com/) · **Content:** CC BY 4.0 · **Code & schema:** Apache-2.0
 
